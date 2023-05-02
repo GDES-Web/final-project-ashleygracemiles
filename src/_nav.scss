@@ -1,0 +1,39 @@
+#navBar {
+    background-color: $espresso;
+    display: grid;
+    grid-template-columns: 88px repeat(10, 1fr) 88px;
+    grid-gap: 0 16px;
+    height: 136px;
+    list-style: none;
+    align-items: center;
+    grid-template-areas: ". navLogo navLogo navLogo .  . navList navList navList navList navList";
+}
+
+#navList {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4rem;
+    grid-area: navList;
+    font: 24px 'Peachi', arial, helvetica, sans-serif;
+    font-weight: 400;
+    color: $linen;
+
+    a {
+        color: $linen;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $dustyrose;
+    }
+}
+
+#navLogo {
+    max-width: 300px;
+    cursor: pointer;
+}
+
+#navLogoLink {
+    grid-area: navLogo;
+}
