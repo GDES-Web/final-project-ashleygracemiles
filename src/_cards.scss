@@ -1,0 +1,193 @@
+#cardStyleOne {
+    grid-area: cardStyleOne;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: fit-content;
+    padding: 48px 88px;
+    gap: 32px;
+}
+
+.cardStyleOne {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    aspect-ratio: 1/1;
+    border-radius: 0.5rem;
+    box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.31);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &.cso-1::before {
+        background-image: url('/public/img/computer-one.jpeg');
+    }
+
+    &.cso-2::before {
+        background-image: url('/public/img/computer-two.jpeg');
+    }
+
+    &.cso-3::before {
+        background-image: url('/public/img/computer-three.jpeg');
+    }
+
+    .csoOverlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        border-radius: 0.5rem;
+        background-color: $sepia;
+        transition: opacity 0.3s ease-in-out;
+
+        p {
+            color: $linen;
+            text-align: center;
+            font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 0 1rem;
+        }
+    }
+
+    &:hover .csoOverlay {
+        opacity: 1;
+    }
+}
+
+.cardStyleTwo {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    border-radius: 0.5rem;
+    box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.31);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &.cst-1::before {
+        background-image: url('/public/img/computer-one.jpeg');
+    }
+
+    &.cst-2::before {
+        background-image: url('/public/img/computer-two.jpeg');
+    }
+
+    &.cst-3::before {
+        background-image: url('/public/img/computer-three.jpeg');
+    }
+
+    .cstOverlay {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        gap: 16px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+        transition: opacity 0.3s ease-in-out;
+
+        p {
+            color: $linen;
+            text-align: center;
+            font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+            padding: 0 1rem;
+        }
+    }
+}
+
+.cardBtn {
+    box-shadow: 0px 9px 20px 0px rgba(151, 77, 60, 0.31);
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .cardContainer {
+        width: 100%;
+        padding: 48px 32px;
+        gap: 32px;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .cardStyleOne {
+        aspect-ratio: 1/1;
+        min-width: 100px;
+        min-height: 100px;
+        max-height: 400px;
+    }
+
+    .cardStyleTwo {
+        aspect-ratio: 1/1;
+        min-width: 100px;
+        min-height: 100px;
+        max-height: 400px;
+        height: 60vh;
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .cardContainer {
+        width: 100%;
+        padding: 48px 32px;
+        gap: 32px;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .cardStyleOne {
+        aspect-ratio: 1/1;
+        min-width: 100px;
+        min-height: 100px;
+        max-height: 400px;
+        height: 60vh;
+    }
+
+    .cardStyleTwo {
+        aspect-ratio: 1/1;
+        min-width: 100px;
+        min-height: 100px;
+        max-height: 400px;
+        height: 60vh;
+    }
+}
