@@ -5,23 +5,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2affe2957c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <nav id="navBar">
-            <a href="index.html" id="navLogoLink"><img src="img/horizontal_logo_linen.png" alt="dolvada design logo"
-                    id="navLogo"></a>
-            <ul role="list" id="navList">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><button class="btn linen" onclick="window.location.href='contact.html';">Contact</button></li>
+        <nav class="mainNav">
+            <a href="#"><img class="navLogo" src="/public/img/logoipsum-horizontal.svg" alt=""></a>
+            <ul role="list" class="navList">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><button class="btn linen btnNav">Contact</button></li>
+            </ul>
+
+            <div class="toggleBtn">
+                <i class="fa fa-bars"></i>
+            </div>
+        </nav>
+
+        <nav class="dropdownNav">
+            <ul role="list" class="dropdownList">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><button class="btn linen btnDropdown">Contact</button></li>
             </ul>
         </nav>
     </header>
+    <div id="overlay" class="overlay"></div>
+    <main>
+        <div class="heroContainerStyleOne">
+            <div class="heroOverlay">
+                <h2 class="heroTitleS1">
+                    This is a title!
+                </h2>
+                <p class="heroSubS1">
+                    This is a subtitle! *Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <button class="btn linen btnHero">This is a button!</button>
+            </div>
+        </div>
+
+        <section class="galleryStyleOne">
+            <div class="galleryItem item1">
+            </div>
+            <div class="galleryItem item2">
+            </div>
+            <div class="galleryItem item3">
+            </div>
+            <div class="galleryItem item4">
+            </div>
+            <div class="galleryItem item5">
+            </div>
+            <div class="galleryItem item6">
+            </div>
+            <div class="galleryItem item7">
+            </div>
+        </section>
+
+
+        <section class="cardContainer">
+            <div class="cardStyleOne cso-1">
+                <div class="csoOverlay">
+                    <p>Card One</p>
+                </div>
+            </div>
+            <div class="cardStyleOne cso-2">
+                <div class="csoOverlay">
+                    <p>Card Two</p>
+                </div>
+            </div>
+            <div class="cardStyleOne cso-3">
+                <div class="csoOverlay">
+                    <p>Card Three</p>
+                </div>
+        </section>
+
+    </main>
+
+    <footer class="footerPrimary">
+        <div class="footerPrimaryContainer">
+            <a href="/public/index.html"><img src="/public/img/logo-icon-placeholder.png" alt="logo placeholder"></a>
+            <div class="footerPrimaryContainerLinks">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerPrimaryContainerSocial">
+            <ul>
+                <li><a href="#"><img class="footerImg" src="/public/img/icons8-facebook-100.png" alt="facebook"></a>
+                </li>
+                <li><a href="#"><img class="footerImg" src="/public/img/icons8-instagram-100.png" alt="instagram"></a>
+                </li>
+                <li><a href="#"><img class="footerImg" src="/public/img/icons8-tiktok-100.png" alt="tik tok"></a></li>
+            </ul>
+        </div>
+        <div class="footerPrimaryCopy">
+            <p>&copy; 2023 Dolvada Design</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggleBtn');
+        const toggleBtnIcon = document.querySelector('.toggleBtn i');
+        const dropdownNav = document.querySelector('.dropdownNav');
+        const overlay = document.querySelector('.overlay');
+
+        toggleBtn.onclick = function () {
+            dropdownNav.classList.toggle('open');
+            overlay.classList.toggle('open');
+            const isOpen = dropdownNav.classList.contains('open');
+
+
+            toggleBtnIcon.classList = isOpen ? 'fa fa-times' : 'fa fa-bars';
+        };
+
+        function toggleOverlay() {
+            var overlay = document.getElementById("overlay");
+            if (overlay.style.display === "block") {
+                overlay.style.display = "none";
+            } else {
+                overlay.style.display = "block";
+            }
+        }
+    </script>
 </body>
 
 </html>

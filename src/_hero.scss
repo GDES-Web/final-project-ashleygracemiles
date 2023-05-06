@@ -1,0 +1,67 @@
+.heroContainerStyleOne {
+    background-image: url(/public/img/house-photo.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height: 40rem;
+    height: auto;
+    width: 100%;
+    color: $linen;
+    display: flex;
+
+    .heroOverlay {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        gap: 2rem;
+        padding: 11rem;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: inherit;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .heroTitleS1 {
+        font-size: 7rem;
+        font-family: $primary-font;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .heroSubS1 {
+        font-family: $secondary-font;
+        font-size: 2.75rem;
+        font-weight: 200;
+        max-width: 60rem;
+        line-height: 1.5;
+    }
+
+    .btnHero {
+        width: fit-content;
+        font-size: 2.25rem;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-tablet) {
+    .heroContainerStyleOne {
+
+        .heroOverlay {
+            padding: 5rem;
+        }
+
+        .heroTitleS1 {
+            font-size: 5rem;
+        }
+
+        .heroSubS1 {
+            font-size: 2rem;
+        }
+
+        .btnHero {
+            font-size: 1.75rem;
+        }
+    }
+}

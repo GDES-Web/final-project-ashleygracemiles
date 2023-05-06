@@ -1,11 +1,15 @@
 .btn {
-    border-radius: 16px;
-    padding: 8px 16px;
-    height: 36px;
-    font: 16px 'Peachi', arial, helvetica;
+    border-radius: 2.5rem;
+    padding: 1rem 2rem;
+    width: fit-content;
+    font: 2rem 'Peachi', arial, helvetica;
     border: none;
     cursor: pointer;
     transition: 0.3s;
+
+    &:active {
+        transform: translateY(4px);
+    }
 }
 
 .linen {
@@ -17,7 +21,6 @@
     }
 
     &:active {
-        transform: translateY(4px);
         background: $akaroa;
     }
 }
@@ -31,7 +34,6 @@
     }
 
     &:active {
-        transform: translateY(4px);
         background-color: $espresso;
     }
 }

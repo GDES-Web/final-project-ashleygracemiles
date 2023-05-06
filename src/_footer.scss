@@ -1,12 +1,11 @@
 .footerPrimary {
     background-color: $sepia;
     color: $linen;
-    padding: 20px;
+    padding: 2rem;
     width: 100vw;
     height: fit-content;
     text-align: center;
     font-family: 'Peachi', Arial, Helvetica, sans-serif;
-    font-size: 24px;
     font-weight: 300;
 
     display: flex;
@@ -14,11 +13,10 @@
     align-items: center;
     justify-content: space-evenly;
     position: absolute;
-    gap: 32px;
+    gap: 3rem;
 
     a {
         color: $linen;
-        text-decoration: none;
 
         &:hover {
             color: $dustyrose;
@@ -31,11 +29,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 2rem;
 
-    .footerPrimaryContainerLogo {
-        width: 100px;
+    a {
+        img {
+            width: 6rem;
+            height: auto;
+            cursor: pointer;
+        }
     }
+
 }
 
 .footerPrimaryContainerLinks {
@@ -46,13 +49,10 @@
         justify-content: space-between;
         list-style: none;
         gap: 64px;
+        cursor: pointer;
+        font-size: 2rem;
+        font-weight: 300;
     }
-}
-
-.footerImg {
-    width: 50px;
-    height: 50px;
-    display: block;
 }
 
 .footerPrimaryContainerSocial {
@@ -63,9 +63,21 @@
         align-items: center;
         justify-content: space-between;
         list-style: none;
-        gap: 16px;
+        width: fit-content;
+        gap: 2rem;
+
+        img {
+            width: 4rem;
+            height: auto;
+            cursor: pointer;
+        }
 
     }
+}
+
+.footerPrimaryCopy {
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 
 @media (max-width: $breakpoint-mobile) {

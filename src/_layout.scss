@@ -8,13 +8,17 @@ $reduce-motion: '(prefers-reduced-motion: reduce)';
     padding: 0;
 }
 
+html {
+    font-size: 8px;
+}
+
 html:focus-within {
     scroll-behavior: smooth;
 }
 
 body {
     text-rendering: optimizeSpeed;
-    line-height: 1.5;
+    line-height: 1;
 }
 
 ul[role='list'],
