@@ -5,12 +5,176 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2affe2957c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
 
 <body>
+    <header>
+        <nav class="mainNav">
+            <a href="#"><img class="navLogo" src="/public/img/logoipsum-horizontal.svg" alt=""></a>
+            <ul role="list" class="navList">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><button class="btn linen btnNav">Contact</button></li>
+            </ul>
 
+            <div class="toggleBtn">
+                <i class="fa fa-bars"></i>
+            </div>
+        </nav>
+
+        <nav class="dropdownNav">
+            <ul role="list" class="dropdownList">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><button class="btn linen btnDropdown">Contact</button></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="overlay" class="overlay"></div>
+    <main>
+        <div class="heroContainerStyleOne">
+            <div class="heroOverlay">
+                <h2 class="heroTitleS1">
+                    Welcome to our site!
+                </h2>
+                <p class="heroSubS1">
+                    This is a subtitle. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <button class="btn linen btnHero">This is a button!</button>
+            </div>
+        </div>
+
+        <div class="galleryStyleOne">
+            <h2>
+                Explore Our Gallery
+            </h2>
+            <p>Explore a world of creativity and innovation through our gallery of stunning designs. From bold logos to
+                striking visuals, discover the power of exceptional graphic design that leaves a lasting impression.</p>
+            <section class="galleryContainer">
+                <div class="galleryItem item1">
+                </div>
+                <div class="galleryItem item2">
+                </div>
+                <div class="galleryItem item3">
+                </div>
+                <div class="galleryItem item4">
+                </div>
+                <div class="galleryItem item5">
+                </div>
+                <div class="galleryItem item6">
+                </div>
+                <div class="galleryItem item7">
+                </div>
+            </section>
+        </div>
+
+        <section class="sectionStyleOneContainer">
+            <div class="imgLeft">
+                <img src="/public/img/woman_portrait.jpeg" alt="portrait of woman">
+            </div>
+
+            <div class="sectionContent">
+                <h2>Hi, my name is Jane!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            </div>
+        </section>
+
+
+        <section class="cardContainer">
+            <h2>
+                Client Work
+            </h2>
+            <p>Explore a world of creativity and innovation through our portfolio of client work!</p>
+            <div class="cardContent">
+                <div class="cardStyleOne cso-1">
+                    <div class="csoOverlay">
+                        <p>Card One</p>
+                    </div>
+                </div>
+                <div class="cardStyleOne cso-2">
+                    <div class="csoOverlay">
+                        <p>Card Two</p>
+                    </div>
+                </div>
+                <div class="cardStyleOne cso-3">
+                    <div class="csoOverlay">
+                        <p>Card Three</p>
+                    </div>
+                </div>
+
+        </section>
+
+        <section class="sliderContainer">
+            <div class="sliderWrapper">
+                <div class="slider">
+                    <img src="img/computer-one.jpeg" alt="computer desk" id="slide-one">
+                    <img src="img/computer-two.jpeg" alt="computer desk" id="slide-two">
+                    <img src="img/computer-three.jpeg" alt="computer desk" id="slide-three">
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-one"></a>
+                    <a href="#slide-two"></a>
+                    <a href="#slide-three"></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footerPrimary">
+        <div class="footerPrimaryContainer">
+            <a href="/public/index.html"><img src="/public/img/logo-icon-placeholder.png" alt="logo placeholder"></a>
+            <div class="footerPrimaryContainerLinks">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerPrimaryContainerSocial">
+            <ul>
+                <li><a href="#"><img class="footerImg" src="/public/img/icons8-facebook-100.png" alt="facebook"></a>
+                </li>
+                <li><a href="#"><img class="footerImg" src="/public/img/icons8-instagram-100.png" alt="instagram"></a>
+                </li>
+                <li><a href="#"><img class="footerImg" src="/public/img/icons8-tiktok-100.png" alt="tik tok"></a></li>
+            </ul>
+        </div>
+        <div class="footerPrimaryCopy">
+            <p>&copy; 2023 Dolvada Design</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggleBtn');
+        const toggleBtnIcon = document.querySelector('.toggleBtn i');
+        const dropdownNav = document.querySelector('.dropdownNav');
+        const overlay = document.querySelector('.overlay');
+
+        toggleBtn.onclick = function () {
+            dropdownNav.classList.toggle('open');
+            overlay.classList.toggle('open');
+            const isOpen = dropdownNav.classList.contains('open');
+
+
+            toggleBtnIcon.classList = isOpen ? 'fa fa-times' : 'fa fa-bars';
+        };
+
+        function toggleOverlay() {
+            var overlay = document.getElementById("overlay");
+            if (overlay.style.display === "block") {
+                overlay.style.display = "none";
+            } else {
+                overlay.style.display = "block";
+            }
+        }
+    </script>
 </body>
 
 </html>

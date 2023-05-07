@@ -1,80 +1,134 @@
 .galleryStyleOne {
-    height: 1200px;
-    display: grid;
-    justify-content: center;
-    margin: 0 auto;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-    grid-template-areas: "gallery1 gallery2 gallery3"
-        "gallery1 gallery4 gallery5"
-        "gallery6 gallery7 gallery5";
-    padding: 11rem;
+    padding: 5rem 11rem 11rem 11rem;
+    text-align: center;
 
-    .galleryItem {
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease-in-out;
+    h2 {
+        font-family: 'Peachi', Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 6rem;
+        color: $espresso;
+    }
 
-        &:hover {
-            transform: scale(1.05);
+    p {
+        font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        line-height: 1.5;
+        font-size: 2.25rem;
+        color: $espresso;
+        margin: 2rem 0;
+    }
+
+    .galleryContainer {
+        height: 90vh;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        margin: 0 auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        grid-template-areas: "gallery1 gallery2 gallery3"
+            "gallery1 gallery4 gallery5"
+            "gallery6 gallery7 gallery5";
+        padding-top: 3rem;
+
+        .galleryItem {
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+            &.item1 {
+                grid-area: gallery1;
+                background-image: url(/public/img/flowers_one.jpeg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            &.item2 {
+                grid-area: gallery2;
+                background-image: url(/public/img/flowers_two.jpeg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            &.item3 {
+                grid-area: gallery3;
+                background-image: url(/public/img/flowers_three.jpeg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            &.item4 {
+                grid-area: gallery4;
+                background-image: url(/public/img/flowers_four.jpeg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            &.item5 {
+                grid-area: gallery5;
+                background-image: url(/public/img/flowers_five.jpeg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            &.item6 {
+                grid-area: gallery6;
+                background-image: url(/public/img/flowers_six.jpeg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            &.item7 {
+                grid-area: gallery7;
+                background-image: url(/public/img/flowers_seven.jpeg);
+                background-size: cover;
+                background-position: center;
+
+            }
         }
     }
 }
 
-.item1 {
-    grid-area: gallery1;
-    background-image: url(/public/img/flowers_one.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.item2 {
-    grid-area: gallery2;
-    background-image: url(/public/img/flowers_two.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.item3 {
-    grid-area: gallery3;
-    background-image: url(/public/img/flowers_three.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.item4 {
-    grid-area: gallery4;
-    background-image: url(/public/img/flowers_four.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.item5 {
-    grid-area: gallery5;
-    background-image: url(/public/img/flowers_five.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.item6 {
-    grid-area: gallery6;
-    background-image: url(/public/img/flowers_six.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-.item7 {
-    grid-area: gallery7;
-    background-image: url(/public/img/flowers_seven.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-
-@media only screen and (max-width: $breakpoint-tablet) {
+@media (max-width: $breakpoint-tablet) {
     .galleryStyleOne {
-        grid-template-areas: "gallery1 gallery2 gallery3"
-            "gallery4 gallery5 gallery6"
-            "gallery7 gallery7 gallery6";
-        max-height: 800px;
+        padding: 5rem;
+
+        .galleryContainer {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: "gallery1 gallery2 gallery3"
+                "gallery4 gallery5 gallery6"
+                "gallery7 gallery7 gallery6";
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .galleryStyleOne {
+        padding: 5rem;
+
+        h2 {
+            font-size: 5rem;
+            line-height: 1.25;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+
+        .galleryContainer {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "gallery2 gallery2"
+                "gallery3 gallery1"
+                "gallery5 gallery4"
+                "gallery5 gallery7"
+                "gallery6 gallery7";
+            grid-gap: 1.5rem;
+            padding-top: 1.5rem;
+        }
     }
 }

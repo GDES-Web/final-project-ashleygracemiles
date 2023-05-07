@@ -3,6 +3,26 @@
 }
 
 .cardContainer {
+    text-align: center;
+    padding: 5rem 11rem;
+
+    h2 {
+        font-family: "Peachi", Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 6rem;
+        color: $espresso;
+    }
+
+    p {
+        font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        line-height: 1.5;
+        font-size: 2.25rem;
+        color: black;
+    }
+}
+
+.cardContent {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -10,7 +30,7 @@
     width: 100%;
     margin: 0 auto;
     height: fit-content;
-    padding: 11rem;
+    padding: 5rem 11rem;
     gap: 6rem 0;
 }
 
