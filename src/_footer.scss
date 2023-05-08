@@ -1,12 +1,12 @@
 .footerPrimary {
-    background-color: $sepia;
+    background-color: $secondary-color;
     color: $linen;
     padding: 2rem;
     width: 100vw;
     height: fit-content;
     text-align: center;
-    font-family: 'Peachi', Arial, Helvetica, sans-serif;
-    font-weight: 300;
+    font-family: $primary-font;
+    font-weight: 400;
 
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
         color: $linen;
 
         &:hover {
-            color: $dustyrose;
+            color: $tertiary-color;
         }
     }
 }
@@ -33,7 +33,7 @@
 
     a {
         img {
-            width: 6rem;
+            width: 20rem;
             height: auto;
             cursor: pointer;
         }
@@ -50,8 +50,8 @@
         list-style: none;
         gap: 64px;
         cursor: pointer;
-        font-size: 2rem;
-        font-weight: 300;
+        font-size: 3rem;
+        font-weight: 400;
     }
 }
 
@@ -76,7 +76,7 @@
 }
 
 .footerPrimaryCopy {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 300;
 }
 

@@ -1,5 +1,5 @@
 .heroContainerStyleOne {
-    background-image: url(/public/img/house-photo.jpeg);
+    background-image: url(/public/img/hero-cover-img.png);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -12,9 +12,9 @@
     .heroOverlay {
         display: flex;
         flex-direction: column;
-        align-items: left;
+        align-items: center;
         justify-content: center;
-        gap: 2rem;
+        gap: 3rem;
         padding: 11rem;
         position: relative;
         top: 0;
@@ -29,18 +29,22 @@
         font-family: $primary-font;
         font-weight: 700;
         line-height: 1;
+        text-align: center;
     }
 
     .heroSubS1 {
         font-family: $secondary-font;
-        font-size: 2.75rem;
-        font-weight: 200;
-        max-width: 60rem;
+        font-size: 3rem;
+        font-weight: 400;
+        max-width: 70rem;
+        text-align: center;
     }
 
     .btnHero {
         width: fit-content;
-        font-size: 2.25rem;
+        font-size: 3rem;
+        font-weight: 800;
+        letter-spacing: .5rem;
     }
 }
 

@@ -22,14 +22,18 @@
  // Main Navigation
 
  .mainNav {
-     background-color: $espresso;
+     background-color: $primary-color;
      font-family: $primary-font;
+     font-weight: 800;
+     letter-spacing: .5rem;
      color: $linen;
-     height: 11rem;
-     padding: 0 11rem;
+     height: fit-content;
+     padding: 4rem 11rem;
      display: flex;
+     flex-direction: column;
      align-items: center;
      justify-content: space-between;
+     gap: 1.5rem;
      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
      z-index: 999;
 
@@ -46,17 +50,19 @@
          display: flex;
          align-items: center;
          justify-content: space-between;
-         gap: 2.5rem;
+         gap: 6rem;
 
          font-size: 2.5rem;
 
          a:hover {
-             color: $dustyrose;
+             color: $secondary-color;
          }
      }
 
      .btnNav {
          font-size: 2.5rem;
+         font-weight: 800;
+         letter-spacing: .5rem;
      }
 
      .toggleBtn {
@@ -71,17 +77,18 @@
  .dropdownNav {
      display: none;
      position: absolute;
-     top: 11rem;
+     top: 16rem;
      width: 100%;
      height: 0;
-     background-color: $tan;
+     background-color: $secondary-color;
      border-radius: 0 0 1rem 1rem;
      overflow: hidden;
      padding: 0;
-     font-size: 3rem;
+     font-size: 5rem;
      font-family: $primary-font;
+     font-weight: 800;
+     letter-spacing: .5rem;
      transition: height 0.2s ease-in-out;
-     box-shadow: 3px 9px 13px 4px rgba(0, 0, 0, 0.18);
      z-index: 999;
 
      &.open {
@@ -109,14 +116,18 @@
      }
 
      .btnDropdown {
-         font-size: 2.5rem;
+         font-size: 4rem;
          width: 100%;
+         font-weight: 800;
+         letter-spacing: .5rem;
      }
  }
 
  @media only screen and (max-width: $breakpoint-tablet) {
      .mainNav {
-         padding: 0 5rem;
+         display: flex;
+         flex-direction: row;
+         align-items: center;
 
          .navList {
              display: none;
@@ -129,5 +140,13 @@
 
      .dropdownNav {
          display: block;
+         font-size: 3rem;
+     }
+
+     .dropdownList {
+
+         .btnDropdown {
+             font-size: 3rem;
+         }
      }
  }

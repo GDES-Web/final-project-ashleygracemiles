@@ -1,25 +1,35 @@
 #cardStyleOne {
-    grid-area: cardStyleOne;
-}
-
-.cardContainer {
     text-align: center;
     padding: 5rem 11rem;
 
     h2 {
-        font-family: "Peachi", Arial, Helvetica, sans-serif;
-        font-weight: 400;
+        font-family: $primary-font;
+        font-weight: 600;
         font-size: 6rem;
-        color: $espresso;
+        color: $primary-color;
     }
 
     p {
-        font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
-        font-weight: 100;
+        font-family: $secondary-font;
+        font-weight: 600;
         line-height: 1.5;
-        font-size: 2.25rem;
-        color: black;
+        font-size: 3rem;
+        color: $linen;
     }
+}
+
+.cardContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+    margin: 0 auto;
+    height: fit-content;
+    gap: 2rem;
+    padding: 5rem 0;
 }
 
 .cardContent {
@@ -31,12 +41,12 @@
     margin: 0 auto;
     height: fit-content;
     padding: 5rem 11rem;
-    gap: 6rem 0;
+    gap: 3rem 0;
 }
 
 .cardStyleOne {
     position: relative;
-    width: 350px;
+    width: 300px;
     height: 400px;
     margin: 0 auto;
     padding: 11rem;
@@ -60,15 +70,15 @@
     }
 
     &.cso-1::before {
-        background-image: url('/public/img/computer-one.jpeg');
+        background-image: url('/public/img/taylor-swift.jpg');
     }
 
     &.cso-2::before {
-        background-image: url('/public/img/computer-two.jpeg');
+        background-image: url('/public/img/chewy.jpeg');
     }
 
     &.cso-3::before {
-        background-image: url('/public/img/computer-three.jpeg');
+        background-image: url('/public/img/tiktok-logo.jpg');
     }
 
     .csoOverlay {
@@ -82,7 +92,7 @@
         height: 100%;
         opacity: 0;
         border-radius: 0.5rem;
-        background-color: rgba($espresso, 0.8);
+        background-color: rgba($primary-color, 0.8);
         backdrop-filter: blur(10px);
         transition: opacity 0.3s ease-in-out;
 
@@ -150,7 +160,7 @@
         height: 100%;
         border-radius: 0.5rem;
         transition: opacity 0.3s ease-in-out;
-        background-color: rgba($espresso, 0.8);
+        background-color: rgba($primary-color, 0.8);
         backdrop-filter: blur(2px);
 
         p {
@@ -166,7 +176,7 @@
 }
 
 .cardBtn {
-    box-shadow: 0px 9px 20px 0px rgba($espresso, 0.8);
+    box-shadow: 0px 9px 20px 0px rgba($primary-color, 0.8);
 }
 
 @media (max-width: $breakpoint-tablet) {

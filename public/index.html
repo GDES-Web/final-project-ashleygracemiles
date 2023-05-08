@@ -7,18 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2affe2957c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css">
-    <title>Document</title>
+    <title>Meowfest 2023</title>
 </head>
 
 <body>
     <header>
         <nav class="mainNav">
-            <a href="#"><img class="navLogo" src="/public/img/logoipsum-horizontal.svg" alt=""></a>
+            <a href="#"><img class="navLogo" src="/public/img/logo-horizontal.png" alt=""></a>
             <ul role="list" class="navList">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><button class="btn linen btnNav">Contact</button></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">Performers</a></li>
+                <li><a href="#">Sponsors</a></li>
+                <li><button class="btn orange btnNav">Buy Tickets!</button></li>
             </ul>
 
             <div class="toggleBtn">
@@ -29,106 +30,67 @@
         <nav class="dropdownNav">
             <ul role="list" class="dropdownList">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><button class="btn linen btnDropdown">Contact</button></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">Performers</a></li>
+                <li><a href="#">Sponsors</a></li>
+                <li><button class="btn orange btnDropdown">Buy Tickets!</button></li>
             </ul>
         </nav>
     </header>
     <div id="overlay" class="overlay"></div>
-    <main>
-        <div class="heroContainerStyleOne">
-            <div class="heroOverlay">
-                <h2 class="heroTitleS1">
-                    Welcome to our site!
-                </h2>
-                <p class="heroSubS1">
-                    This is a subtitle. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <button class="btn linen btnHero">This is a button!</button>
-            </div>
+
+    <div class="heroContainerStyleOne">
+        <div class="heroOverlay">
+            <h2 class="heroTitleS1">
+                Welcome to Meowfest 2023!
+            </h2>
+            <p class="heroSubS1">
+                California's Largest Cat Music Festival is back!
+            </p>
+            <button class="btn orange btnHero">Buy Tickets!</button>
+        </div>
+    </div>
+
+    <section class="sectionStyleOneContainer">
+        <div class="imgLeft">
+            <img src="/public/img/party-cat.jpeg" alt="portrait of woman">
         </div>
 
-        <div class="galleryStyleOne">
-            <h2>
-                Explore Our Gallery
-            </h2>
-            <p>Explore a world of creativity and innovation through our gallery of stunning designs. From bold logos to
-                striking visuals, discover the power of exceptional graphic design that leaves a lasting impression.</p>
-            <section class="galleryContainer">
-                <div class="galleryItem item1">
-                </div>
-                <div class="galleryItem item2">
-                </div>
-                <div class="galleryItem item3">
-                </div>
-                <div class="galleryItem item4">
-                </div>
-                <div class="galleryItem item5">
-                </div>
-                <div class="galleryItem item6">
-                </div>
-                <div class="galleryItem item7">
-                </div>
-            </section>
+        <div class="sectionContent">
+            <h2>Event Information</h2>
+            <h3>Date & Time</h3>
+            <p>August 20-21, 2023<br>11am-7pm</p>
+            <h3>Location</h3>
+            <p>Downtown Park, Seattle, Washington</p>
+            <h3>Purrfectly combining cats and music!</h3>
         </div>
+    </section>
 
-        <section class="sectionStyleOneContainer">
-            <div class="imgLeft">
-                <img src="/public/img/woman_portrait.jpeg" alt="portrait of woman">
-            </div>
+    <section id="cardStyleOne">
+        <h2>Say hello to our sponsors!</h2>
+        <div class="cardContainer">
 
-            <div class="sectionContent">
-                <h2>Hi, my name is Jane!</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
-            </div>
-        </section>
-
-
-        <section class="cardContainer">
-            <h2>
-                Client Work
-            </h2>
-            <p>Explore a world of creativity and innovation through our portfolio of client work!</p>
-            <div class="cardContent">
-                <div class="cardStyleOne cso-1">
-                    <div class="csoOverlay">
-                        <p>Card One</p>
-                    </div>
-                </div>
-                <div class="cardStyleOne cso-2">
-                    <div class="csoOverlay">
-                        <p>Card Two</p>
-                    </div>
-                </div>
-                <div class="cardStyleOne cso-3">
-                    <div class="csoOverlay">
-                        <p>Card Three</p>
-                    </div>
-                </div>
-
-        </section>
-
-        <section class="sliderContainer">
-            <div class="sliderWrapper">
-                <div class="slider">
-                    <img src="img/computer-one.jpeg" alt="computer desk" id="slide-one">
-                    <img src="img/computer-two.jpeg" alt="computer desk" id="slide-two">
-                    <img src="img/computer-three.jpeg" alt="computer desk" id="slide-three">
-                </div>
-                <div class="slider-nav">
-                    <a href="#slide-one"></a>
-                    <a href="#slide-two"></a>
-                    <a href="#slide-three"></a>
+            <div class="cardStyleOne cso-1">
+                <div class="csoOverlay">
+                    <p>Taylor Swift</p>
                 </div>
             </div>
-        </section>
+            <div class="cardStyleOne cso-2">
+                <div class="csoOverlay">
+                    <p>Chewy</p>
+                </div>
+            </div>
+            <div class="cardStyleOne cso-3">
+                <div class="csoOverlay">
+                    <p>Tik Tok</p>
+                </div>
+            </div>
 
-    </main>
+    </section>
 
     <footer class="footerPrimary">
         <div class="footerPrimaryContainer">
-            <a href="/public/index.html"><img src="/public/img/logo-icon-placeholder.png" alt="logo placeholder"></a>
+            <a href="/public/index.html"><img src="/public/img/main-logo-02.png" alt="meowfest logo"></a>
             <div class="footerPrimaryContainerLinks">
                 <ul>
                     <li><a href="#">Privacy Policy</a></li>

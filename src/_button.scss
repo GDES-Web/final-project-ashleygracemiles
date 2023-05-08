@@ -2,7 +2,7 @@
     border-radius: 2.5rem;
     padding: 1rem 2rem;
     width: fit-content;
-    font: 2rem 'Peachi', arial, helvetica;
+    font: 2rem $primary-font;
     border: none;
     cursor: pointer;
     transition: 0.3s;
@@ -12,28 +12,28 @@
     }
 }
 
-.linen {
+.blue {
     background-color: $linen;
-    color: $espresso;
+    color: $primary-color;
 
     &:hover {
-        background: $akaroa;
+        background: $secondary-color;
     }
 
     &:active {
-        background: $akaroa;
+        background: $secondary-color;
     }
 }
 
-.sepia {
-    background-color: $sepia;
+.orange {
+    background-color: $quarternary-color;
     color: $linen;
 
     &:hover {
-        background-color: $espresso;
+        background-color: $tertiary-color;
     }
 
     &:active {
-        background-color: $espresso;
+        background-color: $tertiary-color;
     }
 }
