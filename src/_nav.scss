@@ -124,29 +124,32 @@
  }
 
  @media only screen and (max-width: $breakpoint-tablet) {
-     .mainNav {
-         display: flex;
-         flex-direction: row;
-         align-items: center;
+     header {
+         .mainNav {
+             display: flex;
+             flex-direction: row;
+             align-items: center;
+             padding: 2rem 5rem;
 
-         .navList {
-             display: none;
+             .navList {
+                 display: none;
+             }
+
+             .toggleBtn {
+                 display: block;
+             }
          }
 
-         .toggleBtn {
+         .dropdownNav {
              display: block;
-         }
-     }
-
-     .dropdownNav {
-         display: block;
-         font-size: 3rem;
-     }
-
-     .dropdownList {
-
-         .btnDropdown {
              font-size: 3rem;
+         }
+
+         .dropdownList {
+
+             .btnDropdown {
+                 font-size: 3rem;
+             }
          }
      }
  }
