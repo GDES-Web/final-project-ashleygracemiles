@@ -70,15 +70,15 @@
     }
 
     &.cso-1::before {
-        background-image: url('/public/img/taylor-swift.jpg');
+        background-image: url('./public/img/taylor-swift.jpg');
     }
 
     &.cso-2::before {
-        background-image: url('/public/img/chewy.jpeg');
+        background-image: url('./public/img/chewy.jpeg');
     }
 
     &.cso-3::before {
-        background-image: url('/public/img/tiktok-logo.jpg');
+        background-image: url('./public/img/tiktok-logo.jpg');
     }
 
     .csoOverlay {
