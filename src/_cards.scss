@@ -70,15 +70,15 @@
     }
 
     &.cso-1::before {
-        background-image: url('../public/img/taylor-swift.jpg');
+        background-image: url('./img/taylor-swift.jpg');
     }
 
     &.cso-2::before {
-        background-image: url('../public/img/chewy.jpeg');
+        background-image: url('./img/chewy.jpeg');
     }
 
     &.cso-3::before {
-        background-image: url('../public/img/tiktok-logo.jpg');
+        background-image: url('./img/tiktok-logo.jpg');
     }
 
     .csoOverlay {
@@ -99,7 +99,7 @@
         p {
             color: $linen;
             text-align: center;
-            font-family: 'Lexend Deca', Arial, Helvetica, sans-serif;
+            font-family: $secondary-font;
             font-size: 4rem;
             font-weight: bold;
         }
