@@ -12,6 +12,31 @@
     }
 }
 
+#top {
+    display: none;
+    background-color: $tertiary-color;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    border: none;
+    box-shadow: 0 0 0.2rem $quarternary-color;
+    position: fixed;
+    right: 5rem;
+    bottom: 5rem;
+    z-index: 1000;
+    transition: 0.3s ease;
+
+    i {
+        color: $linen;
+        font-size: 4rem;
+    }
+
+    &:active {
+        transform: translateY(4px);
+    }
+}
+
 .blue {
     background-color: $linen;
     color: $primary-color;
