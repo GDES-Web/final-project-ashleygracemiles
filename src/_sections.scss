@@ -27,8 +27,7 @@
         grid-area: sectionContent;
         width: 100%;
         color: $linen;
-
-        padding: 5rem;
+        padding: 11rem 5rem;
 
         h2 {
             font-family: $primary-font;
@@ -54,39 +53,41 @@
     }
 }
 
-@media only screen and (max-width: $breakpoint-mobile) {
-    .sectionStyleOneContainer {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-            "sectionContent"
-            "image";
-        grid-gap: 0;
-        justify-content: center;
-        align-items: center;
-    }
+.sectionStyleTwoContainer {
+    display: grid;
+    grid-template-areas: "sectionContent image";
+    grid-template-columns: 1.5fr 2fr;
+    grid-gap: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    background-color: $secondary-color;
 
-    .imgLeft {
-        height: 100%;
+    .imgRight {
+        grid-area: image;
+        height: inherit;
         width: 100%;
-        overflow: hidden;
+        height: 100%;
+        position: relative;
 
         img {
-            height: 100%;
             width: 100%;
+            height: 100%;
             object-fit: cover;
         }
     }
 
     .sectionContent {
-        padding: 5rem;
-        height: fit-content;
+        grid-area: sectionContent;
+        width: 100%;
+        color: $linen;
+        padding: 5rem 11rem;
 
         h2 {
             font-family: $primary-font;
             font-weight: 700;
-            font-size: 4rem;
+            font-size: 7rem;
             letter-spacing: .5rem;
             width: 100%;
 
@@ -94,17 +95,64 @@
 
         h3 {
             font-family: $secondary-font;
-            font-size: 2.5rem;
+            font-size: 4rem;
             font-weight: 700;
             width: 100%;
         }
 
         p {
             font-family: $secondary-font;
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 2rem;
         }
+    }
+}
 
+#schedule {
+    padding: 5rem 11rem;
+    width: 100%;
+    background-color: $primary-color;
+    color: $linen;
+
+    h2 {
+        font-family: $primary-font;
+        font-weight: 700;
+        font-size: 7rem;
+        letter-spacing: .5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .scheduleContainer {
+        background-color: $primary-color;
+        display: flex;
+        flex-direction: row;
+        align-items: top;
+        justify-content: space-between;
+        color: $linen;
+        font-family: $secondary-font;
+
+        .img {
+
+            img {
+                width: inherit;
+                max-width: 20rem;
+                object-fit: contain;
+            }
+        }
+
+        h3 {
+            font-size: 4rem;
+            font-weight: 700;
+            width: 100%;
+            text-align: center;
+        }
+
+        ul {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
     }
 }
 
@@ -149,6 +197,186 @@
                 font-family: $secondary-font;
                 font-size: 2.5rem;
                 margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .sectionStyleTwoContainer {
+
+        .imgRight {
+            grid-area: image;
+            height: inherit;
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .sectionContent {
+            padding: 5rem;
+            height: fit-content;
+
+            h2 {
+                font-family: $primary-font;
+                font-weight: 700;
+                font-size: 4rem;
+                letter-spacing: .5rem;
+                width: 100%;
+
+            }
+
+            h3 {
+                font-family: $secondary-font;
+                font-size: 2.5rem;
+                font-weight: 700;
+                width: 100%;
+            }
+
+            p {
+                font-family: $secondary-font;
+                font-size: 2.5rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    #schedule {
+        padding: 5rem;
+
+        h2 {
+            font-size: 6rem;
+        }
+
+        .scheduleContainer {
+            flex-direction: column;
+            align-items: center;
+
+            .img {
+
+                img {
+                    width: inherit;
+                    max-width: 20rem;
+                }
+            }
+
+            ul {
+                font-size: 2.5rem;
+            }
+
+            .imgHidden {
+                display: none;
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mobile) {
+    .sectionStyleOneContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "sectionContent"
+            "image";
+        grid-gap: 0;
+        justify-content: center;
+        align-items: center;
+
+        .imgLeft {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .sectionContent {
+            padding: 5rem;
+            height: fit-content;
+
+            h2 {
+                font-family: $primary-font;
+                font-weight: 700;
+                font-size: 4rem;
+                letter-spacing: .5rem;
+                width: 100%;
+
+            }
+
+            h3 {
+                font-family: $secondary-font;
+                font-size: 2.5rem;
+                font-weight: 700;
+                width: 100%;
+            }
+
+            p {
+                font-family: $secondary-font;
+                font-size: 2.5rem;
+                margin-bottom: 2rem;
+            }
+
+        }
+    }
+
+    .sectionStyleTwoContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "sectionContent"
+            "image";
+        grid-gap: 0;
+        justify-content: center;
+        align-items: center;
+
+        .imgRight {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .sectionContent {
+                padding: 5rem;
+                height: fit-content;
+
+                h2 {
+                    font-family: $primary-font;
+                    font-weight: 700;
+                    font-size: 4rem;
+                    letter-spacing: .5rem;
+                    width: 100%;
+
+                }
+
+                h3 {
+                    font-family: $secondary-font;
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    width: 100%;
+                }
+
+                p {
+                    font-family: $secondary-font;
+                    font-size: 2.5rem;
+                    margin-bottom: 2rem;
+                }
+
             }
         }
     }

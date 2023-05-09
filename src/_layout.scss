@@ -19,6 +19,7 @@ html:focus-within {
 body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    background-color: $linen;
 }
 
 ul[role='list'],
@@ -40,9 +41,4 @@ a {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
-}
-
-
-body {
-    background-color: $linen;
 }
